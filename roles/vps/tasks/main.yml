@@ -65,5 +65,7 @@
          src={{ shadowsocks_qr_code }}
          flat=yes
 
-- debug: Pause for explanation
-  msg: prompt="Your randomly chosen Shadowsocks password is '{{ shadowsocks_password.stdout }}'. A custom QR code that can be used to automatically configure your Shadowsocks clients has been downloaded to /tmp/shadowsocks-qr-code.png. Simply scan this image to get up and running quickly. Look for the option when creating a new profile in the iOS and Android applications. Press any key to continue..."
+#- name: Pause for explanation
+#  pause: prompt="Your randomly chosen Shadowsocks password is '{{ shadowsocks_password.stdout }}'. A custom QR code that can be used to automatically configure your Shadowsocks clients has been downloaded to /tmp/shadowsocks-qr-code.png. Simply scan this image to get up and running quickly. Look for the option when creating a new profile in the iOS and Android applications. Press any key to continue..."
+- debug:
+  msg: prompt="Your randomly chosen Shadowsocks password is '{{ shadowsocks_password.stdout }}'. A custom QR code that can be used to automatically configure your Shadowsocks clients has been downloaded to /tmp/shadowsocks-qr-code.png. Simply scan this image to get up and running quickly. Look for the option when creating a new profile in the iOS and Android applications."
