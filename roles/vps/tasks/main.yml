@@ -1,4 +1,7 @@
 ---
+- name: Update apt use command with proxy.
+  command: "apt-get update -y"
+
 - name: Install Shadowsocks dependencies
 #  apt: pkg={{ item }}
   command: "apt-get install -y {{ item }}"
