@@ -1,6 +1,7 @@
 ---
 - name: Install Shadowsocks dependencies
-  apt: pkg={{ item }}
+#  apt: pkg={{ item }}
+  command: "apt-get install -y {{ item }}"
   with_items: shadowsocks_dependencies
 
 - name: Add the Shadowsocks user
